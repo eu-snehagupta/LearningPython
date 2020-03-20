@@ -1,4 +1,8 @@
 import json
+
+#fetches the inventory details from the text file
+stock = json.loads(open('/Users/Guest/Desktop/code/learningpython/inventory.txt', 'r').read())
+
 # this function displays the welcome screen to the customer
 def welcomeScreen():
     print("Hi. Welcome to our store!")
@@ -6,41 +10,6 @@ def welcomeScreen():
     for stock_details in stock['Items']:
         print(stock_details['item_type'] + "\t:\t" + stock_details['cost'] + " " + stock_details['currency'] + "\t:\t" + stock_details['count'] + "pcs.")
 
-Stock = '''
-{
-    "Items":[
-            {
-                "item_type":"shirt",
-                "code":"001",
-                "count": "30",
-                "cost": "30",
-                "currency":"SEK"
-            },
-            {
-                "item_type":"pant",
-                "code":"002",
-                "count": "40",
-                "cost": "40",
-                "currency":"SEK"
-            },
-            {
-                "item_type":"cap",
-                "code":"003",
-                "count": "20",
-                "cost": "20",
-                "currency":"SEK"
-            },
-            {   
-                "item_type":"socks",
-                "code":"004",
-                "count": "10",
-                "cost": "10",
-                "currency":"SEK"
-            }
-    ]
-}  '''
-
-stock = json.loads(Stock)
 # this funtion fetch the cost of the item baised on the input of multiple_order function
 def shoplist(x):
     for stock_details in stock['Items']:
@@ -67,6 +36,8 @@ def multiple_order(payment_amount):
     elif more_order == "no":
         return payment_amount 
 
+
 welcomeScreen()
+
 print("------------------\n Your net amount is :" + str(multiple_order(0)) + "\n-----------------\n")
 print("Thank you for choosing our store. Have a nice day!")
