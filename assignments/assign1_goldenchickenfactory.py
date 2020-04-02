@@ -33,8 +33,8 @@ def welcomescreen():
 #output:no_last_day, d_rate, b_rate, current_day
 def inputscreen():
     no_last_day = input("Enter number of chickens last day: ")
-    d_rate = input("Enter rate of death of chickens: ")
-    b_rate = input("Enter rate of birth of chickens: ")
+    d_rate = input("Enter rate of death of chickens in %: ")
+    b_rate = input("Enter rate of birth of chickens in %: ")
     current_day = input("Enter todays day: ").lower()
     return no_last_day, d_rate, b_rate, current_day
 
@@ -44,6 +44,7 @@ def outputscreen(no_last_day, d_rate, b_rate, current_day):
     print("ThankYou")
 
 #main
-welcomescreen()
-no_last_day, d_rate, b_rate, current_day = inputscreen()
-outputscreen(no_last_day, d_rate, b_rate, current_day)
+if __name__ == "__main__":
+    welcomescreen()
+    no_last_day, d_rate, b_rate, current_day = inputscreen()
+    outputscreen(no_last_day, d_rate, b_rate, current_day)
