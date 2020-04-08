@@ -70,7 +70,7 @@ def handle(choice):
     elif choice==3:
         cheat()
     else:
-        print("Wrong choice")
+        print("Invalid choice")
 
 if __name__ == "__main__":
     print("1-all cobinations,,2-with defect,,3-cheating problem")
