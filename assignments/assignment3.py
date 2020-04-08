@@ -59,10 +59,11 @@ print("No of unique books in the rack are: {} which are: {} ".format(len(new_lis
 #write a method which takes this dictionary as an input and returns the total number of items Rajiv needs to buy before his trip.
 ####################################
 print("******************") 
+import random
 input_dictionary =   {
                         "Essential": 
                             {
-                                "Decathlon": ["Winter Jacket", "    Hiking Shoes", "Windcheater", "Socks"] ,
+                                "Decathlon": ["Winter Jacket", "Hiking Shoes", "Windcheater", "Socks"] ,
                                 "Levis":     ["Jeans", "Tshirt", "Shirt"] ,
                                 "Haldiram":  [("Dal Makhani", 10), ("Rajma Chawal", 5), ("Paneer Peas", 10)],
                                 "ICICI": ["InternationaL Card", "Euros"]
@@ -72,8 +73,18 @@ input_dictionary =   {
                                 "Apple": ["Ipad", "Headphone", "Battery", "Charger"]
                             }
                     }  
-# print(input_dictionary["Essential"])
-for a,b in input_dictionary.items():
-    input_dictionary.values
-    print(input_dictionary.values)
+essential_list = []
+nonessential_list = []
+for category,options in input_dictionary.items():
+    if category == "Essential":
+        for stores,objects in options.items():
+            for elements in objects:
+                essential_list.append(elements)
+    elif category == "Non Essential":
+        for stores,objects in options.items():
+            for elements in objects:
+                nonessential_list.append(elements)
+nonessential_list = random.sample(nonessential_list, 2)
+print("No of item to buy are: {} \n& \nBuy list: {}".format(len(essential_list + nonessential_list),(essential_list + nonessential_list)))
+
 
