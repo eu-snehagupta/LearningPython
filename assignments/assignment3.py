@@ -23,6 +23,7 @@
 # #     if elements[2]<=10000.00:
 # #         print(elements[0] +", " +elements[1])
 # new_list1 = [elements for elements in input_list1 if elements[2]<10000]
+# print("******************") 
 # print("Low income groups are: ", new_list1)
 
 # ###TASK2(a)-
@@ -33,6 +34,7 @@
 # for elements in input_list2:
 #     if (sum(elements) % 2 == 0):
 #         evenindex.append(input_list2.index(elements))
+# print("******************")        
 # print("Even Index of the input list are: ", evenindex)
 
 # ###TASK2(b)-
@@ -46,8 +48,29 @@
 #         isElement = subelements in new_list2
 #         if isElement == False:
 #             new_list2.append(subelements)
-# # print(new_list2)
+# print("******************")            
 # print("No of unique books in the rack are: {} which are: {} ".format(len(new_list2), new_list2))
 
-
+###TASK3-
+#Rajiv wants to go for a Europe trip, and needs to do his shopping before departure. 
+#His friend Pathak gave him a python dictionary with key as store name and value as list and list of tuples with items that he needs to buy from that store.
+#Rajiv thought he would only buy 2 of the non essential items (any two).
+#write a method which takes this dictionary as an input and returns the total number of items Rajiv needs to buy before his trip.
+input_dictionary =   {
+                        "Essential": 
+                            {
+                                "Decathlon": ["Winter Jacket", "    Hiking Shoes", "Windcheater", "Socks"] ,
+                                "Levis":     ["Jeans", "Tshirt", "Shirt"] ,
+                                "Haldiram":  [("Dal Makhani", 10), ("Rajma Chawal", 5), ("Paneer Peas", 10)],
+                                "ICICI": ["InternationaL Card", "Euros"]
+                            },
+                        "Non Essential":
+                            { 
+                                "Apple": ["Ipad", "Headphone", "Battery", "Charger"]
+                            }
+                    }  
+# print(input_dictionary["Essential"])
+for a,b in input_dictionary.items():
+    input_dictionary.values
+    print(input_dictionary.values)
 
