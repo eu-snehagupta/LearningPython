@@ -44,13 +44,19 @@ print("Even Index of the input list are: ", evenindex)
 ############################
 print("******************") 
 input_list3 = [ ["yellow", "blue" ,"yellow", "green"], ["green", "green", "green", "green"], ["yellow", "grey", "yellow", "green"], ["yellow", "grey", "pink", "green"], ["black", "grey", "yellow", "black"] ]
-new_list2 =[]
-for elements in input_list3:
-    for subelements in elements:
-        isElement = subelements in new_list2
-        if isElement == False:
-            new_list2.append(subelements)
-print("No of unique books in the rack are: {} which are: {} ".format(len(new_list2), new_list2))
+total_uniq_item = set()
+for sublist in input_list3:
+    total_uniq_item = total_uniq_item.union((set(sublist)))
+print("Total uniq books in shelf are: {} and books are: {} ".format(len(total_uniq_item), total_uniq_item)) 
+# new_list2 =[]
+# for elements in input_list3:
+#     for subelements in elements:
+#         isElement = subelements in new_list2
+#         if isElement == False:
+#             new_list2.append(subelements)
+# print("No of unique books in the rack are: {} which are: {} ".format(len(new_list2), new_list2))
+# for x, newelements in enumerate(new_list2):
+#     print(x,newelements)
 
 ###TASK3-
 #Rajiv wants to go for a Europe trip, and needs to do his shopping before departure. 
