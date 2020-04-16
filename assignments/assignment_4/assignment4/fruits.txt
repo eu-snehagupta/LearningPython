@@ -1,0 +1,5 @@
+fruits-0 6
+fruits-1 12
+fruits-2 18
+fruits-3 24
+fruits-4 30
