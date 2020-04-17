@@ -10,16 +10,13 @@ def create_my_text_file(directory_name_2):
     with open (os.path.join(directory_name_2, "new_pizza.txt"), "w") as f:
         for eachitem in itemlist:
             f.writelines( (str(eachitem[0]), " ", str(eachitem[1]), "\n") )
-
 def read_csv_to_dict(file_path):
-    file_ = open(file_path)
-    reader_ = csv.DictReader(file_)
-    storeinfo = []
-    for r in reader_:
-        storeinfo.append(r)
-    file_.close()
-    return storeinfo
-
+    final_dict = {}
+    with open(file_path, "r") as f:
+        reader = csv.DictReader(f)
+        for r in reader:
+                final_dict[r["Product"]] ={"Quantity":r["Quantity"], "Available":r["Available"]}
+    return final_dict
 def create_file_append_data(directory_name_2):
     itemlist = []
     readfile_names = ["fruits.txt", "pizza.txt", "vegetables.txt"]
@@ -27,8 +24,7 @@ def create_file_append_data(directory_name_2):
         readfile_path = os.path.join(directory_name_1, elements)
         with open(readfile_path, "r") as f:
             for eachline in f:
-                itemlist.append(eachline)
-        
+                itemlist.append(eachline)    
     with open(os.path.join(directory_name_2, "all_data_combined.txt"),"w") as f:
         for eachitem in itemlist:
             f.writelines(eachitem)
