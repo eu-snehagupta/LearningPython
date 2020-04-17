@@ -2,16 +2,12 @@ import os
 import csv
 
 def create_my_text_file(directory_name_2):
-    readfile_names = "pizza.txt"
-    readfile_path = os.path.join(directory_name_1, readfile_names)
-    writefile_names = "new_pizza.txt"
-    writefile_path = os.path.join(directory_name_2, writefile_names)
     itemlist = []
-    with open(readfile_path, "r") as f:
+    with open(os.path.join(directory_name_1, "pizza.txt"), "r") as f:
         for eachelement in f:
             element = eachelement.split()
             itemlist.append( (element[0], int(element[1])+10) )
-    with open (writefile_path, "w") as f:
+    with open (os.path.join(directory_name_2, "new_pizza.txt"), "w") as f:
         for eachitem in itemlist:
             f.writelines( (str(eachitem[0]), " ", str(eachitem[1]), "\n") )
 
@@ -24,12 +20,8 @@ def read_csv_to_dict(file_path):
     file_.close()
     return storeinfo
 
-
 def create_file_append_data(directory_name_2):
     itemlist = []
-    writefile_names = "all_data_combined.txt"
-    writefile_path = os.path.join(directory_name_2, writefile_names)
-    
     readfile_names = ["fruits.txt", "pizza.txt", "vegetables.txt"]
     for elements in readfile_names:
         readfile_path = os.path.join(directory_name_1, elements)
@@ -37,11 +29,10 @@ def create_file_append_data(directory_name_2):
             for eachline in f:
                 itemlist.append(eachline)
         
-    with open(writefile_path,"w") as f:
+    with open(os.path.join(directory_name_2, "all_data_combined.txt"),"w") as f:
         for eachitem in itemlist:
             f.writelines(eachitem)
     
-
 ####Task(i):
 if __name__ == "__main__":
     directory_name_1 = "assignment4"
