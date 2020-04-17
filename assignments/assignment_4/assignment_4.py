@@ -33,19 +33,15 @@ def create_file_append_data(directory_name_2):
         for eachitem in itemlist:
             f.writelines(eachitem)
     
-####Task(i):
 if __name__ == "__main__":
     directory_name_1 = "assignment4"
     directory_name_2 = "assignment-sneha"
-    if not os.path.isdir(directory_name_2):
+    if not os.path.isdir(directory_name_2):    ####Task(i):
         os.mkdir(directory_name_2)
     else:
-        print("There is already a directory named assignment-sneha, pls remove or rename it")
-####Task(ii):    
-    create_my_text_file(directory_name_2)
-####Task(iii):
+        print("There is already a directory named assignment-sneha, pls remove or rename it") 
+    create_my_text_file(directory_name_2)    ####Task(ii):   
     file_path = "assignment4/products.csv"
-    dict_data = read_csv_to_dict(file_path)
+    dict_data = read_csv_to_dict(file_path)    ####Task(iii):
     print(dict_data)
-####Task(iv):
-    create_file_append_data(directory_name_2)
+    create_file_append_data(directory_name_2)    ####Task(iv):
