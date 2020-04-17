@@ -1,0 +1,15 @@
+fruits-0 6
+fruits-1 12
+fruits-2 18
+fruits-3 24
+fruits-4 30
+pizza-0 5
+pizza-1 10
+pizza-2 15
+pizza-3 20
+pizza-4 25
+vegetables-0 10
+vegetables-1 20
+vegetables-2 30
+vegetables-3 40
+vegetables-4 50

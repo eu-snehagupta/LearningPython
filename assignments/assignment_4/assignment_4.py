@@ -1,6 +1,5 @@
-    
-#write imports required to do the assignment
 import os
+import csv
 
 def create_my_text_file(directory_name_2):
     readfile_names = "pizza.txt"
@@ -16,22 +15,34 @@ def create_my_text_file(directory_name_2):
         for eachitem in itemlist:
             f.writelines( (str(eachitem[0]), " ", str(eachitem[1]), "\n") )
 
-# def read_csv_to_dict(file_path):
-#     final_dict = dict()
-#     '''write code to read the file at location file_path and copy the data
-#        into a dictionary final_dict'''
-#     return final_dict
+def read_csv_to_dict(file_path):
+    file_ = open(file_path)
+    reader_ = csv.DictReader(file_)
+    storeinfo = []
+    for r in reader_:
+        storeinfo.append(r)
+    file_.close()
+    return storeinfo
 
 
-# def create_file_append_data(directory_name_2):
-#     # create a file name "all_data_combined.txt" at directory_name_2
+def create_file_append_data(directory_name_2):
+    itemlist = []
+    writefile_names = "all_data_combined.txt"
+    writefile_path = os.path.join(directory_name_2, writefile_names)
+    
+    readfile_names = ["fruits.txt", "pizza.txt", "vegetables.txt"]
+    for elements in readfile_names:
+        readfile_path = os.path.join(directory_name_1, elements)
+        with open(readfile_path, "r") as f:
+            for eachline in f:
+                itemlist.append(eachline)
+        
+    with open(writefile_path,"w") as f:
+        for eachitem in itemlist:
+            f.writelines(eachitem)
+    
 
-
-
-
-
-#     pass # remove pass once you have your code written
-
+####Task(i):
 if __name__ == "__main__":
     directory_name_1 = "assignment4"
     directory_name_2 = "assignment-sneha"
@@ -39,18 +50,11 @@ if __name__ == "__main__":
         os.mkdir(directory_name_2)
     else:
         print("There is already a directory named assignment-sneha, pls remove or rename it")
-    
+####Task(ii):    
     create_my_text_file(directory_name_2)
-
-
-    # #Question 3: complete the function read_csv_to_dict(file_path)
-    # # here file_path is the path of file, assignment4/products.csv
-    # file_path = "assignment4/products.csv"
-    # dict_data = read_csv_to_dict(file_path)
-    # print(dict_data)
-
-
-    # # Question 4: complete the function create_file_append_data ,
-    # # which reads all the file fruit.txt, pizza.txt and vegetables.txt
-    # # then it creates a new text file with all the data written into it.
-    # create_file_append_data(directory_name_2)
+####Task(iii):
+    file_path = "assignment4/products.csv"
+    dict_data = read_csv_to_dict(file_path)
+    print(dict_data)
+####Task(iv):
+    create_file_append_data(directory_name_2)
