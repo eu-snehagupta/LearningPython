@@ -1,3 +1,6 @@
+#Task 2:
+#Find the fourth highest  and second lowest number in below list-
+
 def quick_sort(sequence):
     length = len(sequence)
     if length <= 1:

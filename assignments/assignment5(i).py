@@ -1,3 +1,10 @@
+#Task 1:
+#You have given four list of dictionaries Input data.
+#process all the dictionaries in data, to craete one dictionary with only unique keys i.e.
+#if A has dict {"milk": 2 } and C has { "milk": 1} , the find sict will have only one 
+#{ "milk": 3}.
+#Then write the final dictionary to a csv file using DictWriter
+
 import csv
 newdata_ = dict()
 
@@ -15,7 +22,7 @@ def process_dict_lists(data=data):
                 newdata_[key_] =  (newdata_[key_] if key_ in newdata_.keys() else 0) + value
     return(newdata_)
 def write_dict_csv(newdata_):
-    filetowrite = open("datafile.csv", "w")
+    filetowrite = open("assignment5(i)_datafile.csv", "w")
     writer = csv.DictWriter(filetowrite, newdata_.keys())
     writer.writeheader()
     writer.writerow(newdata_)

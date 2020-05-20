@@ -1,3 +1,17 @@
+#Task:
+#In order to do the assignment we need to create files and folders, for this just run the file create_files_for_assgmnt4.py like
+#python create_files_for_assgmnt4.py. this would create a folder named assignment4 and inside the folder 4 files.
+#Question 1: Write code in the below block to create one more directory inside directory assignment4
+# names the directory "assignment-your-name"
+#Question 2: write code to create a text file name "new_pizza.txt" read the date from the file , pizza.txt at assignment4/pizza.txt 
+# and write the same data to the new file you created ("new_pizza.txt") increase the amount of each pizza type by 10, before writing it to
+# the new file. e.g. pizza-0 5 changes to pizza-0 15. The new text files should be create inside the directory directory_name_2
+#Question 3: complete the function read_csv_to_dict(file_path), here file_path is the path of file, assignment4/products.csv
+# write code to read the file at location file_path and copy the data into a dictionary final_dict
+#Question 4: complete the function create_file_append_data ,which reads all the file fruit.txt, pizza.txt and vegetables.txt
+# then it creates a new text file with all the data written into it. Create a file name "all_data_combined.txt" at directory_name_2
+  
+
 import os
 import csv
 
