@@ -1,0 +1,50 @@
+Assignment:
+
+Task 1:
+Coronavirus is at its peak and Jerry wants to help his community; he gets a list of addresses from municipality which has the below structure.
+[ (Name, Address, Income) ……] , with Name and Address being string and Income being a float number.
+From this data which Jerry got from the municipality, he needs to extract all persons whose income is less than Rs 10,000/month. So that he can distribute free food to all of them. 
+Using list comprehension, write code to output a list with family having income <= 10,000.
+Input data:
+
+    [ ("Rishi", "Bhilwandi-24", 100000.50), ("Ramesh", "Hawai Mahal-12", 1900.45),
+      ("Ram", "Kothaguda-24", 100030.50), ("Rohini", "Gachibowli", 200000.50),
+      ("Rashi", "Begumpet", 150000.50), ("Rinki", "Miyapur", 45000.50),
+      ("Pink", "Mahavir nagar-23", 1530.50), ("Daniel", "Char minar", 50000.50), 
+      ("Prince", "Hitech city", 750000.50), ("Kiara", "Kandivali", 9500.50), 
+      ("Ritu", "Silicon Hill", 250000.50), ("Piku", "Patia", 7000.50), 
+      ("Mohit", "Kormangla", 9900.50), ("Anu", "Bellandur", 5500.50)]
+
+Task 2:
+There is a list of lists where you need to get the index of list whose sum is even.
+Eg. Input: [[1,4,6,3], [6,2,1,42], [2,6,4,4] ] 
+So the sum is 14 at index 0, 51 at index 1 and 16 at index 2
+Output index: 0, 2 
+There is book rack with multiple shelfs. Each shelf has books and we represent each shelf by python list data structure. We know that there are same book kept in multiple shelf and also and also multiple copy of same book in a single shelf. Calculate the total number of unique books in the whole rack.
+e.g. in the above figure, there are 3 shelfs in the rack
+shelf_1 = [ yellow, blue, yellow, green]
+shelf_2 = [green, green, green, green]
+shelf_3 = [yellow, grey, yellow, green]
+so, no of unique books = 4.
+Build a sample input data yourself, books name can be any string. Your code should work for any kind of data in the format as list of lists.
+e.g. I would have an input as 
+input: [ [ “yellow”, “blue”, “yellow”, “green”] , [ “green”, “green”, “green”, “green”],  [“yellow”, “grey”, “yellow”, “green”],  [“yellow”, “grey”, “pink”, “green”], [“black”, “grey”, “yellow”, “black”] ]
+
+Task 3:
+Rajiv wants to go for a Europe trip, and needs to do his shopping before departure. His friend Pathak gave him a python dictionary with key as store name and value as list and list of tuples with items that he needs to buy from that store.
+The dictionary what Pathak shared looks like
+ {
+                        "Essential": 
+                            {
+                                "Decathlon": ["winter jacket", "HHiking shoes", "windcheater", "socks"] ,
+                                "Levis":     ["Jeans", "Tshirt", "Shirt"] ,
+                                "Haldiram":  [("Dal Makhani", 10), ("Rajma Chawal", 5), ("Paneer Peas", 10)],
+                                "ICICI": ["Internationa Card", "Euros"]
+                            },
+                        "Non Essential":
+                            { 
+                                "Apple": ["Ipad", "headphone", "Battery", "Charger"]
+                            }
+                    }  
+Rajiv though he would only buy 2 of the non essential items (any two) , write a method which takes this dictionary as an input and returns the total number of items Rajiv needs to buy before his trip.
+All the data is kept in the file, assignment3_data.py , just copy and use them for testing your code.

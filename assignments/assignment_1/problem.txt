@@ -1,0 +1,11 @@
+Assignment:
+
+Task 1:
+There is a  chicken company called “Golden chicken”. The company needs to know the total number of alive chickens available for sale each day. 
+The number of chickens on a current day depends on following factors:
+1.Number of chickens the last day
+2.Rate of death of chickens
+3.Rate of birth of chickens
+Further 5% more chicken dies on Monday and Wednesday than any other weekdays. 
+Write a function which takes as input argument, no of chicken last day, rate of death of chicken, rate of birth of chicken and day of the week and return the total number of alive chicken. 
+Try to break the task into multiple functions to make the code modular and more readable.

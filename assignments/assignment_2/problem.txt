@@ -1,0 +1,24 @@
+Assignment:
+
+Task 1:
+Write a function which calculate the sum of digits.
+e.g. input = 2345 , output of the function would be 2+3+4+5 which is 14.
+Implement the same function using recursion , don’t search on google try your self.
+
+Task 2:
+Write a function which takes string as an argument and returns reformatted string based on a condition.
+e.g.  I create a function called  reformat_string(input_string, condition) , and call the method like
+reformat_string(“hey how are you”, “reverse”) , this will return 'uoy era woh yeh’
+reformat_string(“hey how are you”, “split”) , this will return an array ['hey', 'how', 'are', 'you’]
+reformat_string(“hey how are you”, “upper case”), this will return a string ‘HEY HOW ARE YOU’
+reformat_string(“hey how are you”, “multiply by 3”), this will return a string ‘hey how are you hey how are you hey how are you’
+reformat_string(“       hey how are you      ”, “strip”), this will return a string ‘hey how are you’ i.e. remove left and right spaces.
+reformat_string(“hey how are you”, “slicing”), this will return a string ‘hey are you’
+
+Task 3:
+Tom and jerry are playing game with two dice.  Score of the game is the sum of number shown on the two dices. e.g. one dice shows 6, and other 6 thus out put score is 12.
+1)Print all the combination of dices score possible, e.g. 
+       possible dice score are : ( 6|2), (5|1), ….. and so on
+2)One of the dice is got broken such that it does not have face showing 6 and face showing 1, print the possible score like in 1) with this condition in mind.
+Optional
+3)   Some how, Tom starts cheating and every other time he throws the dice, the number on one of them is always even. Print one such  possible set of scores ( combination of numbers that shows on the dices) thrown by Tom in 10 consecutive trails.

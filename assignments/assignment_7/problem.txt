@@ -1,0 +1,14 @@
+Assignment:
+
+Task 1:
+In the attached csv file "assignment7_datafile.csv" you would find some details about companies, employees and their salaries
+Create a class called Company with attributes company_name, employee_name, salary, loan_acquired, bonus and rating.
+your class will have a method called calculate_net_salary which does salary calculations based on the data in the csv file.
+
+For eg: Calculate Salary for Oscar : 50000-( 10% of 110000)+(10% of 50000) = 44000. DOn't forget to have a constructer of your class.
+
+Loop through the data in csv file and using this class create objects corresponding to each company in the csv file, 
+call the function calculate_net_salary on each of this object to get the salary, keep on saving the employee name and 
+salary in a dictionary declared globaly.
+
+Output: Create a dictionay with employees name as a key and net salary as a value, print this disctionary.

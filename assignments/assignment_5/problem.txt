@@ -1,0 +1,22 @@
+Assignment:
+
+Task1:
+You have given four list of dictionaries data like below. Input data:
+
+A = [{"coke": 1 }, {"milk": 2 }, {"curd": 3 }, { "MILK": 1}, {"juice": 3 } ]
+
+B = [{"orange": 1 }, {"papaya": 2 }, {"pineapple": 3 }, { "apple": 1}, {"papaya": 3 } ]
+
+C = [{"jeans": 1 }, {"shirt": 2 }, {"jeans": 3 }, { "milk": 1}, {"SHIRT": 3 } ]
+
+D = [{"HISTORY": 1 }, {"history": 2 }, {"maths": 3 }, { "civics": 1}, {"maths": 3 } ]
+
+data = [A, B, C, D]
+
+Process all the dictionaries in data, to craete one dictionary with only unique keys i.e.
+if A has dict {"milk": 2 } and C has { "milk": 1} , the find sict will have only one { "milk": 3}.
+Then write the final dictionary to a csv file using DictWriter
+
+Task 2:
+Find the fourth highest  and second lowest number in below list
+listOfNumbers = [45, 67, 23, 43, 25, 45, 54, 89, 67, 56]
