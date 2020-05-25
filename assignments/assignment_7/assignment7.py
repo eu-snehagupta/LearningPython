@@ -12,6 +12,7 @@
 
 import os
 import csv
+from csv import reader
 class Company:
     def __init__(self,company_name,employee_name,basic_salary,loan_acquired,bonus,rating):
         self.company_name = company_name
@@ -22,34 +23,21 @@ class Company:
         self.rating = rating
 
     def calculate_net_salary(self):
-        self.net_salary = self.basic_salary- ((10 * self.loan_acquired)/100) +((self.bonus * self.basic_salary)/100)
+        self.net_salary = self.basic_salary - ((10 * self.loan_acquired)/100) +((self.bonus * self.basic_salary)/100)
         return self.net_salary
 
 def read_data(file_path):
-    # finaldict = {}
-    data = []
     with open(file_path, "r") as f:
-        reader = csv.DictReader(f)
-        for r in reader:
-            for key, value in r.items():
-                for elements in r:
-                    print(key)
-            #     data.append(key)
-            # print(data)
-
-        #   employee = Company(data)
-        #   Employee_Salary = employee.calculate_net_salary()
-        #   finaldict[r["Employee_name"]] = Employee_Salary
-        #   print(finaldict)    
+        csv_reader = reader(f)
+        header = next(csv_reader)
+        data = {}
+        if header != None:
+            for rows in csv_reader:
+                employee = Company(rows[0],rows[1],int(rows[2]),int(rows[3]),int(rows[4].strip("%")),rows[5])
+                employee_salary = employee.calculate_net_salary()
+                data[rows[1]]= employee_salary
+            print(data)
         
-
-
-# employee = Company("TCS", "Oscar", 50000, 110000, 10, "A")
-# employee.calculate_net_salary()
-file_path = "C://Users//Neha//Desktop//python//learningpython//assignments//assignment7_datafile.csv"
+file_path = "C://Users//Neha//Desktop//python//learningpython//assignments//assignment_7//assignment7_datafile.csv"
 # file_path = "assignment_7datafile.csv"
-read_data(file_path)
-
-
-        
-        
+read_data(file_path) 
