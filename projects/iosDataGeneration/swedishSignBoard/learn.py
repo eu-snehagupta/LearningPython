@@ -9,7 +9,7 @@ def read_data(file_directory_name):
         header = next(csv_reader)
         if header != None:
             for rows in csv_reader:
-                data.append("list.append(LearningData(category: \"{}\", image: \"{}\", title: \"{}\", description: \"{}\"))".format(rows[1],rows[2],rows[3],rows[4]))
+                data.append("{}.append(LearningData(category: \"{}\", image: \"{}\", title: \"{}\", description: \"{}\"))".format(rows[1],rows[2],rows[3],rows[4],rows[5]))
     with open (os.path.join(file_directory_name, "swedish_sign_board.txt"), "w") as f:
         for eachitem in data:
             f.write(eachitem + "\n")
