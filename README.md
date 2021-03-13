@@ -7,13 +7,6 @@ Learning the basics of Python while coding on:
 3. Practising Leetcode
 4. Practising Kattis
 
-## Concepts
-Include features for items(expense & Income):
-+ Display the items
-+ Add the items
-+ Edit or remove items
-+ Save and quit
-
 ## Getting Started
 + Prerequisites
 1. Install Python version greater than 3.
@@ -24,11 +17,8 @@ Include features for items(expense & Income):
 git clone https://github.com/your_username_/LearningPython.git
 ```
 
-
 ## Usage
 LearningPython is a repository used for practising Python.
-
-
 
 ## Roadmap
 See the [open issues](https://github.com/eu-snehagupta/LearningPython/issues) for a list of proposed features (and known issues).
