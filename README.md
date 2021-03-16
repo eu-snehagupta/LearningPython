@@ -6,6 +6,7 @@ Learning the basics of Python while coding on:
 2. Assignments
 3. Practising Hackerrank
 4. Practising Kattis, Codility
+5. Solving datastructure & algorithm problems
 
 ## Getting Started
 + Prerequisites
