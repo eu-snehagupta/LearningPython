@@ -1,0 +1,6 @@
+def solution(A):
+    num_set = set(A)
+    for n in num_set:
+        if (n - 1) in num_set or (n + 1) in num_set:
+            return True
+    return False
