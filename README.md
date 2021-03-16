@@ -4,8 +4,8 @@
 Learning the basics of Python while coding on:
 1. Private projects
 2. Assignments
-3. Practising Leetcode
-4. Practising Kattis
+3. Practising Hackerrank
+4. Practising Kattis, Codility
 
 ## Getting Started
 + Prerequisites
