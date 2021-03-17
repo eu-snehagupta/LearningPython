@@ -66,9 +66,26 @@ class LinkList:
         previous.next = temp.next
         temp = None
 
+    # Delete the entire Linked list
+    # In python garbage collection happens therefore, only
+    # self.head = None would also delete the link list              # new_learning :D
+    def delete_list(self):
+        current = self.head
+
+        while current:
+            next_node = current.next
+            del current.data
+            current = next_node
+        self.head = None
+
     # Traverse from the head till the last node of the linked list
     # and print the data of each node while traversing.
     def print_list(self):
+
+        if self.head is None:
+            print("Empty list!")
+            return
+
         current = self.head
         while current:
             print(current.data, end= " ")       # new_learning :D
@@ -103,4 +120,7 @@ if __name__ == '__main__':
     l_list.delete(7)    # 0->5->2->4->11->Null
 
     # printing the value of the nodes in the linked list
+    l_list.print_list()
+
+    l_list.delete_list()        # None
     l_list.print_list()
