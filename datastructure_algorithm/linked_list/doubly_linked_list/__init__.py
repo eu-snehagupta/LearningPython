@@ -5,7 +5,7 @@ class Node:
         self.next = None
 
 
-class DoubleLinkedList:
+class DoublyLinkedList:
 
     def __init__(self, ):
         self.head = None
@@ -89,7 +89,7 @@ class DoubleLinkedList:
 
 
 if __name__ == '__main__':
-    l_list = DoubleLinkedList()
+    l_list = DoublyLinkedList()
 
     l_list.append(4)
     l_list.push(7)
