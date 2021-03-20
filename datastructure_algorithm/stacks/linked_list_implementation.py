@@ -49,6 +49,17 @@ class Stack:
             print(current.data, end= " ")
             current = current.next
 
+    def delete(self):
+        if self.is_empty():
+            print("Empty stack.")
+            return
+        current = self.head
+        while current is not None:
+            temp = current.next
+            del current.data
+            current = temp
+        self.head = None
+
 
 if __name__ == '__main__':
     stack = Stack()
@@ -62,6 +73,8 @@ if __name__ == '__main__':
     stack.push(4)
     stack.print()
     print("\n", stack.top())
+    stack.print()
+    stack.delete()
     stack.print()
 
 

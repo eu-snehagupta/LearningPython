@@ -27,6 +27,10 @@ def top(stack):
     return stack[-1]
 
 
+def delete_stack(stack):
+    del stack[:]
+
+
 if __name__ == '__main__':
     s = create_stack()
     push(s, 3)
@@ -35,5 +39,5 @@ if __name__ == '__main__':
     print("Popped: ", pop(s))
     print("Print stack: ", s)
     print("Peek: ", top(s))
-
-
+    delete_stack(s)
+    print(s)
