@@ -4,16 +4,16 @@ class Queue:
         self.front = self.rear = 0
         self.capacity = length
 
-    def queue_size(self):
-        return len(self.queue)
-
     def is_empty(self):
         return len(self.queue) == 0
 
     def is_full(self):
         return len(self.queue) == self.capacity
 
-    def queue_capacity(self):
+    def queue_size(self):
+        return len(self.queue)
+
+    def get_capacity(self):
         return self.capacity
 
     def queue_front(self):
