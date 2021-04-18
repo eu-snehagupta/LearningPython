@@ -1,7 +1,7 @@
 from itertools import permutations
 
 
-def countingValleys(steps, path):
+def counting_valleys(steps, path):
     track_count = 0
     no_valley = 0
     in_valley = False
@@ -19,4 +19,4 @@ def countingValleys(steps, path):
 
 
 if __name__ == '__main__':
-    print(countingValleys(12, "DDUUDDUDUUUD"))
+    print(counting_valleys(12, "DDUUDDUDUUUD"))
