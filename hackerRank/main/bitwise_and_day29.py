@@ -6,6 +6,5 @@ def bitwiseAnd(N, K):
                     return k
     return 0
 
-
 if __name__ == '__main__':
     print(bitwiseAnd(5, 2))

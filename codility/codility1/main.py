@@ -35,5 +35,5 @@ def solution(A, X):
 
 
 if __name__ == '__main__':
-    input_data = [1,2,5,9,11]
+    input_data = [1,2,5,5,11]
     print(solution(input_data, 5))
